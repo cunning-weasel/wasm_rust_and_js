@@ -80,6 +80,9 @@ const getIndex = (row, column) => {
   return row * width + column;
 };
 
+// refactored this for performance 
+// but still pretty hot - best 
+// candidate to port to rust
 const drawCells = () => {
   const cellsPtr = universe.cells();
   const cells = new Uint8Array(memory.buffer, cellsPtr, width * height);
