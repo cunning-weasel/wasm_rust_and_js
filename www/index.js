@@ -191,4 +191,4 @@ const fps = new (class {
 
 drawGrid();
 drawCells();
-play();
+pause();
